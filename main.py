@@ -14,6 +14,10 @@ def main():
     print(trello)
     card = trello.cards.get("pyhDPxft")
     print(card)
+    # card["badges"]['description'] = "Chad Description"
+    # print(card)
+    trello.cards.update("pyhDPxft",desc="[This is Google](http://www.google.com)")
+    trello.cards.new_attachment("pyhDPxft",url="https://www.google.com",name="The Googles.")
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     main()
